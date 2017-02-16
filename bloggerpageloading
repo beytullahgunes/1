@@ -1,0 +1,25 @@
+<style>
+#abt-page-loader {
+        position: fixed!important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        background:#000 url('http://3.bp.blogspot.com/-sW166HTPK4U/UY2kVNdjsFI/AAAAAAAAEHk/fIO-B-mOeCE/s200/load6.gif') no-repeat 50% 30%;
+        color: #FFF;
+        display: none;
+        font: 0/0 a;
+        text-shadow: none;
+        padding: 1em 1.2em;
+}
+</style> 
+<script type='text/javascript'>
+//<![CDATA[
+$(document.body).append('<div id="abt-page-loader">Loading...</div>');
+$(window).on("beforeunload", function() {
+    // ... Show the Animation `.fadeIn()`
+    $('#abt-page-loader').fadeIn(1000).delay(6000).fadeOut(1000);
+});
+//]]>
+</script>
